@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --white: #FFFFFFff;
+    --bittersweet: #FE7B61ff;
+    --magenta: #E73886ff;
+    --bright-pink-crayola: #EE6072ff;
+    --black: #000101ff;
+    --brown: #4C261A;
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* BODY START HERE */
+
+body {
+    color: var(--brown);
+    font-family: var(--font-family);
+    background-color: var(--white);
+    padding: 0;
+    margin: 0;
+    padding: 0;;
+
+}
+
+/* BODY END HERE */
+
+/* NAVBAR START HERE */
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: transparent;
+  margin-bottom: 1px;
+}
+
+.brand img {
+  max-width: 200px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--bittersweet);
+  font-size: 25px;
+  margin-left: 2rem;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.toggle-btn {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background-color: var(--bittersweet);
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.toggle-btn span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+@media (max-width: 854px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .button {
+      display: block;
+  }
+
+  .toggle-btn {
+      display: flex;
+  }
+
+  .toggle-btn.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle-btn.active span:nth-child(2) {
+      opacity: 0;
+  }
+
+  .toggle-btn.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+
+
+/* NAVBAR END HERE  */
+
+/* section-1 START HERE */
+#section-1{
+  margin-top: 3.1rem;
+}
+
+
+
+/* CSS */
+
+
+/* hero1 END HERE */
+
+/*  */
+
+/* Design Elements  */
+
+.twoColorRounds{
+  position: absolute;
+  top: 0;
+  right: 4rem;
+  z-index: -999;
+}
+
+.brownRound{
+  background-color: rgb(252, 194, 59);
+  height: 3rem;
+  width: 3rem;
+  z-index: -10;
+  border-radius: 100%;
+  opacity: 0.5;
+}
+.roseRound{
+  background-color: var(--bittersweet);
+  height: 3rem;
+  width: 3rem;
+  z-index: -9;
+  border-radius: 100%;
+  opacity: 0.6;
+  position: relative;
+  left: 1rem;
+  bottom: 1.1rem;
+
+}
